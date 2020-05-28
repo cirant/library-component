@@ -66,40 +66,100 @@ $colors: map-merge(
   $colors
 );
 
-$primary:#FEB3B6;
 $primary-05:#FEB3B6;
 $primary-10:#FC8187;
 $primary-20:#E81E2B;
 $primary-30:#B00009;
 $primary-40:#780004;
 
+$primary-alfa-15:rgba(232,30,43,0.15);
+$primary-alfa-25:rgba(232,30,43,0.25);
+$primary-alfa-35:rgba(232,30,43,0.35);
+$primary-alfa-65:rgba(232,30,43,0.65);
+$primary-alfa-75:rgba(232,30,43,0.75);
+$primary-alfa-85:rgba(232,30,43,0.85);
+
 $secondary-green-05:#A8E9DA;
 $secondary-green-20:#1CAA90;
 $secondary-green-40:#04584C;
 $secondary-green-50:#004030;
+
+$secondary-green-alfa-15:rgba(28,170,144,0.15);
+$secondary-green-alfa-25:rgba(28,170,144,0.25);
+$secondary-green-alfa-35:rgba(28,170,144,0.35);
+$secondary-green-alfa-65:rgba(28,170,144,0.65);
+$secondary-green-alfa-75:rgba(28,170,144,0.75);
+$secondary-green-alfa-85:rgba(28,170,144,0.85);
 
 $secondary-blue-05:#B1BFED;
 $secondary-blue-20:#2D47B5;
 $secondary-blue-40:#131F6B;
 $secondary-blue-50:#001140;
 
-$secondary-purple-05:#CFA7DC;
-$secondary-purple-20:#7C2582;
-$secondary-purple-40:#420456;
-$secondary-purple-50:#2B0040;
+$secondary-blue-alfa-15:rgba(45,71,181,0.15);
+$secondary-blue-alfa-25:rgba(45,71,181,0.25);
+$secondary-blue-alfa-35:rgba(45,71,181,0.35);
+$secondary-blue-alfa-65:rgba(45,71,181,0.65);
+$secondary-blue-alfa-75:rgba(45,71,181,0.75);
+$secondary-blue-alfa-85:rgba(45,71,181,0.85);
 
 $secondary-purple-05:#CFA7DC;
 $secondary-purple-20:#7C2582;
 $secondary-purple-40:#420456;
 $secondary-purple-50:#2B0040;
 
+$secondary-purple-alfa-15:rgba(124,37,130,0.15);
+$secondary-purple-alfa-25:rgba(124,37,130,0.25);
+$secondary-purple-alfa-35:rgba(124,37,130,0.35);
+$secondary-purple-alfa-65:rgba(124,37,130,0.65);
+$secondary-purple-alfa-75:rgba(124,37,130,0.75);
+$secondary-purple-alfa-85:rgba(124,37,130,0.85);
+
+$neutral-10: #F6F3F5;
+$neutral-20: #D5D0D5;
+$neutral-30: #9C9A9F;
+$neutral-40: #646569;
+$neutral-50: #383638;
+$neutral-60: #1F1E1E;
+
+$neutral-alfa-15: rgba(31,30,30,0.15);
+$neutral-alfa-25: rgba(31,30,30,0.25);
+$neutral-alfa-35: rgba(31,30,30,0.35);
+$neutral-alfa-65: rgba(31,30,30,0.65);
+$neutral-alfa-75: rgba(31,30,30,0.75);
+$neutral-alfa-85: rgba(31,30,30,0.85);
+
+$success-05: #CCF1C1;
+$success-10: #A9E39F;
+$success-20: #69C562;
+$success-30: #32A734;
+$success-40: #0E891A;
+$success-50: #006B14;
+
+$warning-05: #F1E6AB;
+$warning-10: #E3D076;
+$warning-20: #C9A71C;
+$warning-30: #B08800;
+$warning-40: #967100;
+$warning-50: #8C6700;
+
+$info-05: #C0E9FD;
+$info-10: #8FDAFA;
+$info-20: #43BBED;
+$info-30: #00A1DF;
+$info-40: #007DB7;
+$info-50: #005D8F;
+
+$danger-05: #F9D4D5;
+$danger-10: #F2B8BC;
+$danger-20: #E6838F;
+$danger-30: #D9536B;
+$danger-40: #CC284E;
+$danger-50: #BF0238;
+
+$primary: $primary-20;
 $secondary: #1CAA90;
-$secondary-2: #2D47B5;
-$secondary-3: #7C2582;
-$success: #69C562;
-$info:#43BBED;
-$warning:#C9A71C;
-$danger:#E6838F;
+
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
@@ -109,12 +169,83 @@ $theme-colors: map-merge(
   (
     "primary":    $primary,
     "secondary":  $secondary,
-    "secondary-2":  $secondary-2,
-    "secondary-3":  $secondary-3,
-    "success":    $success,
-    "info":       $info,
-    "warning":    $warning,
-    "danger":     $danger,
+    "primary-05": $primary-05,
+    "primary-10": $primary-10,
+    "primary-20": $primary-20,
+    "primary-30": $primary-30,
+    "primary-40": $primary-40,
+    "primary-alfa-15": $primary-alfa-15,
+    "primary-alfa-25": $primary-alfa-25,
+    "primary-alfa-35": $primary-alfa-35,
+    "primary-alfa-65": $primary-alfa-65,
+    "primary-alfa-75": $primary-alfa-75,
+    "primary-alfa-85": $primary-alfa-85,
+    "secondary-green-05": $secondary-green-05,
+    "secondary-green-20": $secondary-green-20,
+    "secondary-green-40": $secondary-green-40,
+    "secondary-green-50": $secondary-green-50,
+    "secondary-green-alfa-15": $secondary-green-alfa-15,
+    "secondary-green-alfa-25": $secondary-green-alfa-25,
+    "secondary-green-alfa-35": $secondary-green-alfa-35,
+    "secondary-green-alfa-65": $secondary-green-alfa-65,
+    "secondary-green-alfa-75": $secondary-green-alfa-75,
+    "secondary-green-alfa-85": $secondary-green-alfa-85,
+    "secondary-blue-05": $secondary-blue-05,
+    "secondary-blue-20": $secondary-blue-20,
+    "secondary-blue-40": $secondary-blue-40,
+    "secondary-blue-50": $secondary-blue-50,
+    "secondary-blue-alfa-15": $secondary-blue-alfa-15,
+    "secondary-blue-alfa-25": $secondary-blue-alfa-25,
+    "secondary-blue-alfa-35": $secondary-blue-alfa-35,
+    "secondary-blue-alfa-65": $secondary-blue-alfa-65,
+    "secondary-blue-alfa-75": $secondary-blue-alfa-75,
+    "secondary-blue-alfa-85": $secondary-blue-alfa-85,
+    "secondary-purple-05": $secondary-purple-05,
+    "secondary-purple-20": $secondary-purple-20,
+    "secondary-purple-40": $secondary-purple-40,
+    "secondary-purple-50": $secondary-purple-50,
+    "secondary-purple-alfa-15": $secondary-purple-alfa-15,
+    "secondary-purple-alfa-25": $secondary-purple-alfa-25,
+    "secondary-purple-alfa-35": $secondary-purple-alfa-35,
+    "secondary-purple-alfa-65": $secondary-purple-alfa-65,
+    "secondary-purple-alfa-75": $secondary-purple-alfa-75,
+    "secondary-purple-alfa-85": $secondary-purple-alfa-85,
+    "neutral-10": $neutral-10,
+    "neutral-20": $neutral-20,
+    "neutral-30": $neutral-30,
+    "neutral-40": $neutral-40,
+    "neutral-50": $neutral-50,
+    "neutral-60": $neutral-60,
+    "neutral-alfa-15": $neutral-alfa-15,
+    "neutral-alfa-25": $neutral-alfa-25,
+    "neutral-alfa-35": $neutral-alfa-35,
+    "neutral-alfa-65": $neutral-alfa-65,
+    "neutral-alfa-75": $neutral-alfa-75,
+    "neutral-alfa-85": $neutral-alfa-85,
+    "success-05": $success-05,
+    "success-10": $success-10,
+    "success-20": $success-20,
+    "success-30": $success-30,
+    "success-40": $success-40,
+    "success-50": $success-50,
+    "warning-05": $warning-05,
+    "warning-10": $warning-10,
+    "warning-20": $warning-20,
+    "warning-30": $warning-30,
+    "warning-40": $warning-40,
+    "warning-50": $warning-50,
+    "info-05": $info-05,
+    "info-10": $info-10,
+    "info-20": $info-20,
+    "info-30": $info-30,
+    "info-40": $info-40,
+    "info-50": $info-50,
+    "danger-05": $danger-05,
+    "danger-10": $danger-10,
+    "danger-20": $danger-20,
+    "danger-30": $danger-30,
+    "danger-40": $danger-40,
+    "danger-50": $danger-50,
     "light":      $light,
     "dark":       $dark
   ),
