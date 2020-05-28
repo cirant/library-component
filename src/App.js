@@ -26,6 +26,11 @@ const TextCol = ({ name, type, text = '', bg = false }) => {
   </div>;
 }
 
+const Box = ({ arr, prefix = '' }) => {
+  return <>
+    {arr.map(val => <div className={`col p-2 m-1 elevation${prefix}-${val}`}>{val}</div>)}
+  </>
+}
 
 function App() {
   return (
@@ -88,7 +93,40 @@ function App() {
         <TextCol name="bg-warning" type="feedback" bg={true} />
         <TextCol name="bg-info" type="feedback" bg={true} />
         <TextCol name="bg-danger" type="feedback" bg={true} />
+      </div>
 
+      <div className="row">
+        <div className="col-12 p-1">
+          fonts
+          <hr className="m-0" />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <h1> h1 Sed ut perspiciatis unde omnis iste natus error</h1>
+          <h2> h2 Sed ut perspiciatis unde omnis iste natus error</h2>
+          <h3> h3 Sed ut perspiciatis unde omnis iste natus error</h3>
+          <h4> h4 Sed ut perspiciatis unde omnis iste natus error</h4>
+          <h5> h5 Sed ut perspiciatis unde omnis iste natus error</h5>
+          <h6> h6 Sed ut perspiciatis unde omnis iste natus error</h6>
+          <p> p:  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis vehicula nibh. Nam ultricies placerat justo, id consequat ante. Suspendisse augue arcu, lacinia in venenatis at, sagittis eu ante. Donec lobortis pellentesque risus, a aliquam mauris ullamcorper quis. Etiam rutrum aliquet erat, ut vulputate ligula consectetur sed. Mauris posuere turpis </p>
+          <p className="font-weight-bold"> p:  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis vehicula nibh. Nam ultricies placerat justo, id consequat ante. Suspendisse augue arcu, lacinia in venenatis at, sagittis eu ante. Donec lobortis pellentesque risus, a aliquam mauris ullamcorper quis. Etiam rutrum aliquet erat, ut vulputate ligula consectetur sed. Mauris posuere turpis </p>
+          <span className="note"> span Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis vehicula nibh. Nam ultricies placerat justo, id consequat ante. Suspendisse augue arcu, lacinia in venenatis at, sagittis eu ante. Donec lobortis pellentesque risus, a aliquam mauris ullamcorper quis. Etiam rutrum aliquet erat, ut vulputate ligula consectetur sed. Mauris posuere turpis </span>
+        </div>
+      </div>
+
+      <div className="row mb-1">
+
+        <div className="col-12 p-1">
+          Shadows
+          <hr className="m-0" />
+        </div>
+
+        <Box arr={[1, 2, 3, 4, 5]} />
+      </div>
+
+      <div className="row mb-5">
+        <Box arr={[1, 2, 3, 4]} prefix="-element" />
       </div>
 
     </div>

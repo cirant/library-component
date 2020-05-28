@@ -1,11 +1,12 @@
 @import "node_modules/bootstrap/scss/functions";
-@import './variables';
 @import './fonts';
+@import './variables';
 @import "node_modules/bootstrap/scss/mixins";
 
 // Optional
 @import "node_modules/bootstrap/scss/reboot";
-@import "node_modules/bootstrap/scss/type";
+@import "./type";
+@import "./elevation";
 @import "node_modules/bootstrap/scss/images";
 @import "node_modules/bootstrap/scss/code";
 @import "node_modules/bootstrap/scss/grid";
@@ -44,7 +45,6 @@
 
 body {
   margin: 0;
-  font-family: 'Ubuntu', sans-serif;
 }
 
 .fill{
