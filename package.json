@@ -12,7 +12,7 @@
     "react": "^16.13.1",
     "webpack": "4.42.0"
   },
-  "main": "./src/lib.js",
+  "main": "./src/lib",
   "scripts": {
     "start": "react-scripts start",
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
@@ -38,12 +38,14 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.10.1",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
     "@storybook/addons": "^5.3.19",
     "@storybook/preset-create-react-app": "^3.0.0",
     "@storybook/react": "^5.3.19",
     "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^9.1.2",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   }
