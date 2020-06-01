@@ -1,5 +1,7 @@
 import React from 'react';
 import './scss/custom.scss';
+import Badge from './components/badge';
+import Button from './components/button';
 
 const TextCol = ({ name, type, text = '', bg = false }) => {
   const primary = ['05', '10', '20', '30', '40'];
@@ -32,9 +34,18 @@ const Box = ({ arr, prefix = '' }) => {
   </>
 }
 
+const ButtonColumn = ({ arr, variant = '', disabled = false, size = "" }) => {
+  // const 
+  return <>
+    {arr.map((val, i) => <div className={`col`}>
+      <Button key={`val-${i}`} size={size} disabled={disabled} color={val} variant={variant} > label button </Button>
+    </div>)}
+  </>
+}
+
 function App() {
   return (
-    <div className="App container">
+    <div className="App container pb-5">
       <div className="row">
         <div className="col-12 p-1">
           Solid Colors
@@ -125,9 +136,42 @@ function App() {
         <Box arr={[1, 2, 3, 4, 5]} />
       </div>
 
-      <div className="row mb-5">
+      <div className="row">
         <Box arr={[1, 2, 3, 4]} prefix="-element" />
       </div>
+
+      <div className="row p-1">
+        <Badge value="999" />
+      </div>
+
+      <div className="row mb-1">
+        <ButtonColumn arr={['primary', 'secondary-green', 'secondary-blue', 'secondary-purple']} />
+      </div>
+      <div className="row mb-1">
+        <ButtonColumn arr={['primary', 'secondary-green', 'secondary-blue', 'secondary-purple']} variant="outline" />
+      </div>
+      <div className="row mb-1">
+        <ButtonColumn arr={['primary', 'secondary-green', 'secondary-blue', 'secondary-purple']} disabled={true} />
+      </div>
+      <div className="row mb-1">
+        <ButtonColumn arr={['primary', 'secondary-green', 'secondary-blue', 'secondary-purple']} variant="outline" disabled={true} />
+      </div>
+
+      <div className="row mb-1">
+        <ButtonColumn size="large" arr={['primary', 'secondary-green', 'secondary-blue', 'secondary-purple']} />
+      </div>
+      <div className="row mb-1">
+        <ButtonColumn size="large" arr={['primary', 'secondary-green', 'secondary-blue', 'secondary-purple']} variant="outline" />
+      </div>
+      <div className="row mb-1">
+        <ButtonColumn size="large" arr={['primary', 'secondary-green', 'secondary-blue', 'secondary-purple']} disabled={true} />
+      </div>
+      <div className="row mb-1">
+        <ButtonColumn size="large" arr={['primary', 'secondary-green', 'secondary-blue', 'secondary-purple']} variant="outline" disabled={true} />
+      </div>
+
+      <Button color="primary"> label button </Button>
+      <Button size="large" color="primary"> label button </Button>
 
     </div>
   );

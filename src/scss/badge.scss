@@ -1,0 +1,11 @@
+@import "node_modules/bootstrap/scss/functions";
+@import './variables';
+
+.badge {
+  background-color: $primary-20;
+  display: inline-flex;
+  color: white;
+  font-size: 11px;
+  padding: 0px 5px;
+  border-radius: 9px;
+}

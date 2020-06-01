@@ -1,0 +1,92 @@
+@import "node_modules/bootstrap/scss/functions";
+@import './variables';
+@import './elevation';
+
+
+.btn{
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 300;
+  cursor: pointer;
+  @extend .elevation-element-2;
+
+  &:active{
+    box-shadow: none;
+  }
+
+  @each $name, $size in $secondary-colors {
+    $baseColor: unquote(nth($size, 3));
+    $activeColor: unquote(nth($size, 4));
+    $disableColor: $neutral-20;
+
+    &.btn-secondary-#{$name} {
+      color: white;
+      background-color: $baseColor;
+      &:hover,&:active{
+        background-color: $activeColor;
+      }
+    }
+
+    &.btn-secondary-#{$name}-outline {
+      background-color: white;
+      border: 1px solid $baseColor;
+      color: $baseColor;
+
+      &:hover,&:active{
+        border-color: $activeColor;
+        color: $activeColor;
+      }
+
+      &:disabled{
+        border: 1px solid $disableColor;
+        background-color: white;
+        color: $disableColor;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &.btn-primary-outline{
+    $disableColor: $neutral-20;
+    
+    background-color: white;
+    border: 1px solid $primary-20;
+    color: $primary-20;
+
+    &:hover,&:active{
+      border-color: $primary-30;
+      color: $primary-30;
+    }
+    
+    &:disabled{
+      border: 1px solid $disableColor;
+      background-color: white;
+      color: $disableColor;
+      box-shadow: none;
+    }
+  }
+
+  &.btn-primary{
+    background-color: $primary-20;
+    color: white;
+
+    &:hover,&:active{
+      background-color: $primary-30;
+    }
+  }
+
+  &.large{
+    padding: 12px 24px;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  &:disabled{
+    background-color: $neutral-20;
+    pointer-events: none;
+    border: none;
+    box-shadow: none;
+    color: white;
+  }
+}
